@@ -39,7 +39,6 @@ public class Board {
 		if(thereIsAPiece(position)) {
 			throw new BoardException("já tem uma peça ai oh!!");
 		}
-		
 		pieces[position.getRow()][position.getColumn()] = piece;
 		piece.position = position;
 	}
