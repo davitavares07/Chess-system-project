@@ -1,5 +1,7 @@
 package boardgame;
 
+import java.lang.reflect.UndeclaredThrowableException;
+
 public class Board {
 
 	private int rows;
@@ -41,6 +43,19 @@ public class Board {
 		}
 		pieces[position.getRow()][position.getColumn()] = piece;
 		piece.position = position;
+	}
+	
+	public Piece removePiece(Position position) {
+		if (!positionExists(position)) {
+			throw new BoardException("Essa posição não está no tabuleiro");
+		}
+		if (piece(position) == null) {
+			return null;
+		}
+		Piece aux = piece(position);
+		aux.position = null;
+		pieces[position.getRow()][position.getColumn()] = null;
+		return aux;
 	}
 
 	public boolean positionExists(int row, int column) {
