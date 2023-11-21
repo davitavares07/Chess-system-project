@@ -110,7 +110,7 @@ public class UI {
 		
 		System.out.print("Pretas: ");
 		System.out.print(ANSI_YELLOW);
-		System.out.print(Arrays.toString(white.toArray()));
+		System.out.print(Arrays.toString(black.toArray()));
 		System.out.println(ANSI_RESET);
 	}
 
