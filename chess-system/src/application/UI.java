@@ -95,6 +95,10 @@ public class UI {
 		System.out.println();
 		System.out.println("turno: " + chessMatch.getTurn());
 		System.out.println("Esperando Jogador: " + chessMatch.getCurrentPlayer());
+		
+		if (chessMatch.getCheck()) {
+			System.out.println("CHECK!! tomou um ta ligado!");
+		}
 
 	}
 	
