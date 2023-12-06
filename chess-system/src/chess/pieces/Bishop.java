@@ -3,6 +3,7 @@ package chess.pieces;
 import boardgame.Board;
 import boardgame.Position;
 import chess.ChessPiece;
+import chess.Color;
 
 public class Bishop extends ChessPiece {
 
@@ -26,7 +27,7 @@ public class Bishop extends ChessPiece {
 		p.setValues(position.getRow() - 1, position.getColumn() - 1);
 		while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
 			mat[p.getRow()][p.getColumn()] = true;
-			p.setValues(p.getRow(), p.getColumn());
+			p.setValues(p.getRow() - 1, p.getColumn() - 1);
 		}
 		if (getBoard().positionExists(p) && isThereOponnentPiece(p)) {
 			mat[p.getRow()][p.getColumn()] = true;
